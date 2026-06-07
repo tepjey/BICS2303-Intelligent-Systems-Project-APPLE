@@ -33,7 +33,7 @@ To maintain full data integrity and prevent any mathematical bleeding of evaluat
 ---
 
 ## 📊 Dataset Profile: FER2013
-The model is validated against the benchmark **FER2013** open-source dataset, comprised of 35,887 grayscale facial images restricted to a native $48\times48$ pixel resolution. The data is structurally categorized into seven primary targets:
+The model is validated against the benchmark [FER2013](https://www.kaggle.com/datasets/msambare/fer2013) open-source dataset, comprised of 35,887 grayscale facial images restricted to a native $48\times48$ pixel resolution. The data is structurally categorized into seven primary targets:
 * `0`: Angry
 * `1`: Disgust *(Severe Underrepresentation)*
 * `2`: Fear
