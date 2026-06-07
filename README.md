@@ -1,2 +1,43 @@
-# BICS2303-Intelligent-Systems-Project-APPLE
-Comparative Facial Expression Recognition system using regional geometric ratio feature engineering across SVM, Decision Tree, and Random Forest topologies. Built for BICS 2303 at IIUM.
+# Facial Expression Recognition via Regional Geometric Ratio Feature Engineering
+
+## 📌 Project Overview
+This repository contains the intelligent system project developed by **Group APPLE** for the course **BICS 2303: Intelligent Systems (Semester 2 2025/2026)** at the **International Islamic University Malaysia (IIUM)** under the supervision of **Asst. Prof. Dr. Dini Oktarina Dwi Handayani**.
+
+The system addresses critical challenges in traditional Facial Expression Recognition (FER) workflows by shifting away from linear, raw-pixel dimensional reduction (such as PCA on flat matrices) to an **Expert Domain Approach** using hand-crafted regional geometric ratios. The framework implements a strict data-separation pipeline to completely prevent data leakage and compares performance metrics across three machine learning topologies:
+1. Support Vector Machine (SVC with RBF Kernel)
+2. Decision Tree Classifier
+3. Random Forest Classifier (Ensemble Topology)
+
+The highest-performing model is deployed into a functional, user-friendly desktop application prototype built with Python's native `tkinter` GUI library.
+
+---
+
+## 🔬 System Architecture & Pipeline
+To maintain full data integrity and prevent any mathematical bleeding of evaluation statistics into the training parameters, the codebase follows a strict linear sequence:
+
+1. **Stratified Partitioning:** Splitting raw facial arrays into an 80% training set and 20% validation set, stratifying by target labels to guarantee stable representation of rare classes (e.g., *Disgust*).
+2. **Regional Anatomical Slicing:** Reshaping flat gray pixel arrays back into spatial matrices to isolate explicit horizontal zones (Eyebrows, Eyes, Nose Bridge, and Mouth) along with vertical symmetry zones.
+3. **Geometric Feature Extraction:** Calculating eight distinct localized ratios tracking texture variance, intensity deltas, asymmetry, and muscle contractions.
+4. **Isolated Scaling:** Fitting a standard Z-score normalizer strictly on training data metrics, then down-transforming validation splits separately.
+5. **Ensemble Classification:** Evaluating and optimizing hyperparameter bounds across all models using balanced class distributions to eliminate algorithmic bias.
+
+---
+
+## 📊 Dataset Profile: FER2013
+The model is validated against the benchmark **FER2013** open-source dataset, comprised of 35,887 grayscale facial images restricted to a native $48\times48$ pixel resolution. The data is structurally categorized into seven primary targets:
+* `0`: Angry
+* `1`: Disgust *(Severe Underrepresentation)*
+* `2`: Fear
+* `3`: Happy *(Dominant Majority)*
+* `4`: Sad
+* `5`: Surprise
+* `6`: Neutral
+
+---
+
+## 💻 Installation & Dependencies
+
+Ensure you have Python 3.8+ installed locally. Clone the repository and install the verified baseline libraries via `pip`:
+
+```bash
+pip install opencv-python scikit-learn numpy kagglehub
