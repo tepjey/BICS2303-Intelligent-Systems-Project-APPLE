@@ -38,7 +38,7 @@ The application implements a strict execution workflow where feature scalers are
 The prototype runs on standard Python environments (Python 3.10 - 3.12). The required third-party libraries must be available in your runtime system:
 
 ```bash
-pip install kagglehub opencv-python numpy dlib scikit-learn matplotlib seaborn pillow
+pip install -r requirements.txt
 
 ```
 
