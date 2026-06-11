@@ -74,7 +74,7 @@ Ensure your final workspace submission directory follows this exact structural l
 Open your terminal inside the project folder root and run the master script.
 
 ```bash
-python APPLE_FINAL.py
+python APPLE_FINAL_V2.py
 
 ```
 
