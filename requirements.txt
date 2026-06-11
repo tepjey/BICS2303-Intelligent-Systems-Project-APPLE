@@ -1,0 +1,9 @@
+dlib==20.0.1
+kagglehub==1.0.2
+matplotlib==3.10.9
+numpy==2.4.6
+opencv_contrib_python==4.10.0.84
+opencv_python==4.13.0.92
+Pillow==12.2.0
+scikit_learn==1.9.0
+seaborn==0.13.2
